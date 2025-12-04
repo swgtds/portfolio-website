@@ -3,18 +3,18 @@ import placeholderImages from './placeholder-images.json';
 import { Home, User, Briefcase, Shapes, MessageSquare, Code, Rss } from 'lucide-react';
 
 export const siteConfig: SiteConfig = {
-  name: "John Doe",
+  name: "Swagata Das",
   description: "A passionate Full-Stack Developer with experience in building scalable web applications using modern technologies. Let's build something amazing together.",
   url: "https://recruiter-ready.vercel.app",
   ogImage: "https://recruiter-ready.vercel.app/og-image.jpg",
-  email: "johndoe@example.com",
+  email: "swagatadas003@gmail.com",
   links: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    x: "https://x.com/johndoe",
-    leetcode: "https://leetcode.com/johndoe",
-    codechef: "https://www.codechef.com/users/johndoe",
-    codeforces: "https://codeforces.com/profile/johndoe",
+    github: "https://github.com/swgtds",
+    linkedin: "https://linkedin.com/in/swgtds",
+    x: "https://x.com/swgtds_",
+    leetcode: "https://leetcode.com/u/swgtds",
+    codechef: "https://www.codechef.com/users/swgtds",
+    codeforces: "https://codeforces.com/profile/swgtds",
   },
 };
 
@@ -37,13 +37,13 @@ export const mobileNavLinks: NavLink[] = [
 
 
 export const hero: Hero = {
-  name: "John Doe",
-  role: "Full-Stack Developer",
-  tagline: "Building elegant solutions for complex problems.",
+  name: "Swagata Das",
+  role: "AI Engineer",
+  tagline: "Building web and AI solutions that make a difference.",
 };
 
 export const about: About = {
-  description: "I'm a passionate Full-Stack Developer with a knack for creating efficient, scalable, and user-friendly web applications. With a strong foundation in both front-end and back-end technologies, I enjoy turning complex problems into simple, beautiful, and intuitive designs. I thrive in collaborative environments and am always eager to learn and adapt to new challenges.",
+  description: "I'm Swagata Das, a dedicated Full-Stack Developer with a passion for creating efficient and scalable web applications. With expertise in both front-end and back-end technologies, I thrive on transforming ideas into functional digital solutions. My goal is to leverage technology to solve real-world problems and deliver exceptional user experiences.",
   cta: "View My Work",
 };
 
@@ -154,5 +154,5 @@ export const achievements: Achievement[] = [
 ];
 
 export const contact: Contact = {
-  email: "johndoe@email.com",
+  email: "swagatadas003@gmail.com",
 };
