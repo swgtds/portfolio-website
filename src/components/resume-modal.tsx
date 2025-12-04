@@ -9,7 +9,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
-import { Download } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 
 type ResumeModalProps = {
   isOpen: boolean;
@@ -17,31 +17,49 @@ type ResumeModalProps = {
 };
 
 export function ResumeModal({ isOpen, onOpenChange }: ResumeModalProps) {
-  const resumeUrl = "/resume.pdf";
+  // Google Drive link for preview (embed format)
+  const resumeViewUrl = "https://drive.google.com/file/d/1R-rc7nHcnsdGnFOVSMW5RmiNiLKYQ5ST/preview";
+  // Google Drive link for download (direct download format)
+  const resumeDownloadUrl = "https://drive.google.com/uc?export=download&id=1R-rc7nHcnsdGnFOVSMW5RmiNiLKYQ5ST";
+
+  const handleDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Create a temporary link for download
+    const link = document.createElement('a');
+    link.href = resumeDownloadUrl;
+    link.download = 'resume.pdf';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl w-[95%] h-[90vh] flex flex-col p-4 sm:p-6">
-        <DialogHeader>
-          <DialogTitle className="text-2xl">My Resume</DialogTitle>
+      <DialogContent className="max-w-4xl w-[90vw] h-[80vh] flex flex-col p-4">
+        <DialogHeader className="pb-2">
+          <DialogTitle className="text-xl">Resume</DialogTitle>
         </DialogHeader>
-        <div className="flex-grow border rounded-lg overflow-hidden">
+        
+        <div className="flex-1 border rounded overflow-hidden">
           <iframe
-            src={resumeUrl}
+            src={resumeViewUrl}
             className="w-full h-full"
             title="Resume"
-            aria-label="Resume PDF"
+            style={{ border: 'none' }}
+            allow="autoplay"
           />
         </div>
-        <DialogFooter className="mt-4 flex-col-reverse sm:flex-row justify-end gap-2">
+        
+        <DialogFooter className="pt-3">
           <DialogClose asChild>
             <Button variant="outline">Close</Button>
           </DialogClose>
-          <Button asChild>
-            <a href={resumeUrl} download="resume.pdf">
-              <Download className="mr-2 h-4 w-4" />
-              Download
-            </a>
+          <Button onClick={handleDownload}>
+            <Download className="mr-2 h-4 w-4" />
+            Download
           </Button>
         </DialogFooter>
       </DialogContent>

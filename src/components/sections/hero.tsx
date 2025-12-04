@@ -10,6 +10,12 @@ import { ResumeModal } from '../resume-modal';
 export default function Hero() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
+  const handleResumeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsResumeModalOpen(true);
+  };
+
   return (
     <>
       <section id="hero" className="relative pt-24 md:pt-32 pb-8 md:pb-12">
@@ -27,10 +33,14 @@ export default function Hero() {
                 <a href="#contact">Get in Touch</a>
               </Button>
               
-              <Button size="lg" variant="outline" onClick={() => setIsResumeModalOpen(true)}>
+              <button 
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8 rounded-md"
+                onClick={handleResumeClick}
+                type="button"
+              >
                 <Download className="mr-2" />
                 Resume
-              </Button>
+              </button>
 
             </div>
           </div>
