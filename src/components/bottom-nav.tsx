@@ -18,7 +18,7 @@ export default function BottomNav() {
 
   return (
     <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-2 p-2 rounded-full border border-border/50 bg-card shadow-lg backdrop-blur-sm">
+      <div className="flex items-center gap-2 p-2 rounded-full border border-border/50 bg-card shadow-2xl backdrop-blur-sm ring-1 ring-black/5 dark:ring-white/10">
         {mobileNavLinks.map((link) => {
           // Handle the "More" link specially
           if (link.name === 'More') {
