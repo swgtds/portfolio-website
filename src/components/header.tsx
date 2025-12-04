@@ -16,8 +16,8 @@ export default function Header() {
           {siteConfig.name}
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        {/* Desktop Nav - Hidden since we're using floating nav */}
+        <nav className="hidden xl:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -34,7 +34,7 @@ export default function Header() {
           {/* The Sheet component for the hamburger menu has been removed. */}
         </div>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-2">
             <SocialLinks variant='hero' />
             <ThemeToggle />
         </div>

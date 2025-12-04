@@ -1,6 +1,6 @@
 import type { SiteConfig, NavLink, Hero, About, SkillCategory, Project, Experience, Achievement, Contact } from './types';
 import placeholderImages from './placeholder-images.json';
-import { Home, User, Briefcase, Shapes, MessageSquare, Code, Rss } from 'lucide-react';
+import { Home, User, Briefcase, Shapes, MessageSquare, Code, Rss, MoreHorizontal } from 'lucide-react';
 
 export const siteConfig: SiteConfig = {
   name: "Portfolio | swgtds",
@@ -30,9 +30,17 @@ export const navLinks: NavLink[] = [
 
 export const mobileNavLinks: NavLink[] = [
   { name: "Home", href: "/#hero", icon: Home },
-  { name: "Projects", href: "/#projects", icon: Code },
   { name: "Blog", href: "/blog", icon: Rss },
   { name: "Contact", href: "/#contact", icon: MessageSquare },
+  { name: "More", href: "#", icon: MoreHorizontal },
+];
+
+// Additional sections that appear in the "More" menu
+export const moreNavLinks: NavLink[] = [
+  { name: "About", href: "/#about", icon: User },
+  { name: "Experience", href: "/#experience", icon: Briefcase },
+  { name: "Skills", href: "/#skills", icon: Shapes },
+  { name: "Projects", href: "/#projects", icon: Code },
 ];
 
 
