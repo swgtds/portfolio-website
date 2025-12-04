@@ -3,7 +3,7 @@ import placeholderImages from './placeholder-images.json';
 import { Home, User, Briefcase, Shapes, MessageSquare, Code, Rss } from 'lucide-react';
 
 export const siteConfig: SiteConfig = {
-  name: "Swagata Das",
+  name: "Portfolio | swgtds",
   description: "A passionate Full-Stack Developer with experience in building scalable web applications using modern technologies. Let's build something amazing together.",
   url: "https://recruiter-ready.vercel.app",
   ogImage: "https://recruiter-ready.vercel.app/og-image.jpg",
