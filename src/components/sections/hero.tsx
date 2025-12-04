@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="hero" className="relative pt-8 md:pt-12 pb-8 md:pb-12">
+      <section id="hero" className="relative pt-8 md:pt-24 pb-8 md:pb-12">
         <div className="container max-w-4xl mx-auto text-center">
           <p className="text-lg font-medium text-primary mb-2">{hero.role}</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-4">
