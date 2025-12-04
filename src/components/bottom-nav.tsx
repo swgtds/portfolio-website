@@ -11,9 +11,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
-import { MoreHorizontal } from 'lucide-react';
+import { MoreHorizontal, X } from 'lucide-react';
 
 export default function BottomNav() {
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+
   return (
     <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
       <div className="flex items-center gap-2 p-2 rounded-full border border-border/50 bg-card shadow-lg backdrop-blur-sm">
@@ -21,15 +23,32 @@ export default function BottomNav() {
           // Handle the "More" link specially
           if (link.name === 'More') {
             return (
-              <DropdownMenu key={link.name}>
+              <DropdownMenu key={link.name} onOpenChange={setIsMoreMenuOpen}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
                     size="icon"
                     className="h-10 w-10 rounded-full hover:bg-accent"
                   >
-                    <MoreHorizontal className="h-5 w-5" />
-                    <span className="sr-only">More sections</span>
+                    <div className="relative h-5 w-5 flex items-center justify-center">
+                      <MoreHorizontal 
+                        className={`h-5 w-5 absolute transition-all duration-300 ease-in-out ${
+                          isMoreMenuOpen 
+                            ? 'rotate-90 scale-0 opacity-0' 
+                            : 'rotate-0 scale-100 opacity-100'
+                        }`} 
+                      />
+                      <X 
+                        className={`h-5 w-5 absolute transition-all duration-300 ease-in-out ${
+                          isMoreMenuOpen 
+                            ? 'rotate-0 scale-100 opacity-100' 
+                            : 'rotate-90 scale-0 opacity-0'
+                        }`} 
+                      />
+                    </div>
+                    <span className="sr-only">
+                      {isMoreMenuOpen ? 'Close menu' : 'More sections'}
+                    </span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
