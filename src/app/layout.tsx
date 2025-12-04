@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from '@/lib/data';
 import { CustomThemeProvider } from '@/components/theme-provider';
 import { ScrollProgress } from '@/components/scroll-progress';
-import Header from '@/components/header';
 import BottomNav from '@/components/bottom-nav';
 
 export const metadata: Metadata = {
@@ -67,7 +66,6 @@ export default function RootLayout({
       <body className="font-body antialiased min-h-screen bg-background text-foreground transition-colors duration-300">
         <CustomThemeProvider>
           <ScrollProgress />
-          <Header />
           {children}
           <Toaster />
           <BottomNav />
