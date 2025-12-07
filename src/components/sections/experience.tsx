@@ -1,8 +1,23 @@
+"use client";
+
 import { experience } from "@/lib/data";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function Experience() {
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
+
+  const toggleExpanded = (index: number) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedItems(newExpanded);
+  };
   return (
     <section id="experience" className="py-2 md:py-4">
       <div className="container max-w-3xl mx-auto">
@@ -53,11 +68,35 @@ export default function Experience() {
                     </div>
                   )}
                   
-                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-outside ml-5">
-                    {item.description.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
+                  {/* Expandable description section */}
+                  <div className="space-y-3">
+                    <button
+                      onClick={() => toggleExpanded(index)}
+                      className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors duration-200"
+                      aria-expanded={expandedItems.has(index)}
+                    >
+                      <span>Description</span>
+                      <ChevronDown 
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          expandedItems.has(index) ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    
+                    <div 
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        expandedItems.has(index) 
+                          ? 'max-h-96 opacity-100' 
+                          : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <ul className="space-y-2 text-sm text-muted-foreground list-disc list-outside ml-5">
+                        {item.description.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
