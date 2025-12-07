@@ -1,5 +1,6 @@
 import { experience } from "@/lib/data";
 import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   return (
@@ -37,6 +38,20 @@ export default function Experience() {
                   </div>
                   
                   <p className="text-sm text-muted-foreground mb-3">{item.period}</p>
+                  
+                  {item.tags && item.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {item.tags.map((tag, tagIndex) => (
+                        <Badge 
+                          key={tagIndex} 
+                          variant="secondary" 
+                          className="text-xs px-2 py-0.5"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                   
                   <ul className="space-y-2 text-sm text-muted-foreground list-disc list-outside ml-5">
                     {item.description.map((point, i) => (

@@ -68,6 +68,7 @@ export type Experience = {
   period: string;
   description: string[];
   logo?: string;
+  tags?: string[];
 };
 
 export type Achievement = {
