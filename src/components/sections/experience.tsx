@@ -60,6 +60,12 @@ export default function Experience() {
                         {item.location}
                       </>
                     )}
+                    {item.workType && (
+                      <>
+                        <span className="mx-2">|</span>
+                        {item.workType}
+                      </>
+                    )}
                   </p>
                   
                   {item.tags && item.tags.length > 0 && (

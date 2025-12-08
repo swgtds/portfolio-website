@@ -70,6 +70,7 @@ export type Experience = {
   logo?: string;
   tags?: string[];
   location?: string;
+  workType?: string;
 };
 
 export type Achievement = {
