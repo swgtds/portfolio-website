@@ -128,6 +128,7 @@ export const experience: Experience[] = [
     role: "Software Development Intern",
     company: "CometChat",
     period: "June 2025 - Present",
+    location: "Remote",
     logo: "https://placehold.co/32x32/212529/0ea5e9/png?text=C",
     tags: ["Langchain", "Mastra", "LLM Orchestration", "WebRTC", "ReactJS", "JavaScript"],
     description: [
@@ -142,6 +143,7 @@ export const experience: Experience[] = [
     role: "Open Source Contributor",
     company: "Rocket.Chat",
     period: "February 2025 - April 2025",
+    location: "Remote",
     logo: "https://placehold.co/32x32/212529/22c55e/png?text=R",
     tags: ["TypeScript", "Sequelize", "LLM Applications", "Node.js", "Webhooks"],
     description: [

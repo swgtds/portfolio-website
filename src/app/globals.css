@@ -78,9 +78,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 14px; /* Slightly smaller base font size */
   }
   html {
     scroll-behavior: smooth;
+    font-size: 14px; /* Ensure consistent sizing */
   }
 }
 

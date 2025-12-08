@@ -69,6 +69,7 @@ export type Experience = {
   description: string[];
   logo?: string;
   tags?: string[];
+  location?: string;
 };
 
 export type Achievement = {

@@ -52,7 +52,15 @@ export default function Experience() {
                     </div>
                   </div>
                   
-                  <p className="text-sm text-muted-foreground mb-3">{item.period}</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {item.period}
+                    {item.location && (
+                      <>
+                        <span className="mx-2">|</span>
+                        {item.location}
+                      </>
+                    )}
+                  </p>
                   
                   {item.tags && item.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mb-4">
