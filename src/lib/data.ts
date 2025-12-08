@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navLinks: NavLink[] = [
-  { name: "Home", href: "/#hero", icon: Home },
+  { name: "Home", href: "/", icon: Home },
   { name: "About", href: "/#about", icon: User },
   { name: "Experience", href: "/#experience", icon: Briefcase },
   { name: "Skills", href: "/#skills", icon: Shapes },
