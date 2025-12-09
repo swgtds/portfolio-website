@@ -29,7 +29,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const mobileNavLinks: NavLink[] = [
-  { name: "Home", href: "/#hero", icon: Home },
+  { name: "Home", href: "/", icon: Home },
   { name: "Blog", href: "/blog", icon: Rss },
   { name: "Contact", href: "/#contact", icon: MessageSquare },
   { name: "More", href: "#", icon: MoreHorizontal },
