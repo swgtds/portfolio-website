@@ -70,55 +70,73 @@ export const skills: SkillCategory[] = [
   },
 ];
 
-const [project1Img, project2Img, project3Img] = placeholderImages.placeholderImages;
-
 export const projects: Project[] = [
   {
-    title: "Project One: E-commerce Platform",
-    description: "A full-featured e-commerce platform with a modern, responsive design.",
-    image: project1Img,
-    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    title: "Kernel",
+    description: "Chat with your entire codebase, powered by a high-performance RAG engine delivering instant semantic search and rich technical insights.",
+    image: {
+      id: "kernel",
+      description: "Kernel - RAG engine for codebases",
+      imageUrl: "/projects/kernel.png",
+      imageHint: "code search AI",
+    },
+    techStack: ["RAG", "Mastra", "NextJS", "ExpressJS", "Typescript"],
     links: {
-      live: "#",
-      github: "#",
+      live: "https://k.swgtds.in",
+      github: "https://github.com/swgtds/kernel",
     },
     details: {
-      problem: "The client needed a scalable online store to sell their products and manage inventory.",
-      role: "Led the front-end development, focusing on user experience and performance.",
-      techUsed: "Next.js for server-side rendering, TypeScript for type safety, and PostgreSQL for the database.",
-      outcome: "Successfully launched the platform, resulting in a 40% increase in online sales within the first quarter.",
+      problem: "Developers needed a way to quickly search and understand large codebases semantically.",
+      role: "Built the RAG pipeline and conversational interface for code exploration.",
+      techUsed: "Mastra for AI orchestration, Next.js for the frontend, and Express.js for the backend API.",
+      outcome: "Enables instant semantic search and deep technical insights for codebases.",
     },
   },
   {
-    title: "Project Two: Real-time Chat App",
-    description: "A real-time chat application for seamless communication.",
-    image: project2Img,
-    techStack: ["React", "Node.js", "Socket.IO", "MongoDB"],
-    links: {
-      live: "#",
-      github: "#",
-    },
-    details: {
-      problem: "The goal was to build a low-latency chat service for a community platform.",
-      role: "Developed the back-end infrastructure and real-time data handling.",
-      techUsed: "Node.js with Express, Socket.IO for WebSocket communication, and MongoDB for message storage.",
-      outcome: "Achieved an average message latency of under 100ms, supporting over 1,000 concurrent users.",
-    },
+  title: "Portal",
+  description:
+    "A fast, minimal developer portal that centralizes AI chat, rooms, and productivity tools in a single place.",
+  image: {
+    id: "portal",
+    description: "Portal – AI chat and tools hub",
+    imageUrl: "/projects/portal.png",
+    imageHint: "portal dashboard with chat and tools",
   },
+  techStack: ["Go", "WebSockets","React","TypeScript","LLM integration"],
+  links: {
+    live: "https://p.swgtds.in",
+    github: "https://github.com/swgtds/portal",
+  },
+  details: {
+    problem:
+      "Developers often fragment their workflow across disparate tools for communication, AI assistance, and basic utilities, leading to context switching and reduced focus. I needed a unified, distraction-free environment that consolidated these essential workflows.",
+    role:
+      "Architected and engineered the complete full-stack solution. I designed the WebSocket-based real-time communication layer in Go, implemented the responsive React frontend, and integrated LLM capabilities to create a seamless, intelligent user experience.",
+    techUsed:
+      "Built with a robust Go backend leveraging Goroutines and WebSockets for low-latency state synchronization. The frontend is a modern React application using TypeScript, Vite, and Tailwind CSS for a performant, type-safe UI. Integrated with LLM APIs to provide context-aware AI assistance directly within the workflow.",
+    outcome:
+      "Delivered a highly responsive, aesthetically pleasing portal that significantly reduces friction in daily tasks. The application successfully merges real-time collaboration with personal productivity tools, all wrapped in a cohesive, developer-friendly design system.",
+  },
+},
   {
-    title: "Project Three: Data Visualization Dashboard",
-    description: "A dashboard for visualizing complex business intelligence data.",
-    image: project3Img,
-    techStack: ["React", "D3.js", "Python", "Flask"],
+    title: "StumpVizz",
+    description: "Ad-free, high-quality cricket live streaming platform with real-time chat and AI powered match summaries.",
+    image: {
+      id: "stumpvizz",
+      description: "StumpVizz - Cricket streaming platform",
+      imageUrl: "/projects/stumpvizz.png",
+      imageHint: "cricket streaming",
+    },
+    techStack: ["React", "Express", "Typescript", "Custom Search Engine (CSE) Integration"],
     links: {
-      live: "#",
-      github: "#",
+      live: "https://stumpvizz.vercel.app",
+      github: "https://github.com/swgtds/stumpvizz",
     },
     details: {
-      problem: "The company needed an internal tool to help executives visualize key performance indicators.",
-      role: "Designed and implemented the interactive data visualizations and the supporting API.",
-      techUsed: "React and D3.js for the front-end charts, with a Python/Flask API to serve the data.",
-      outcome: "The dashboard is now a critical tool for data-driven decision-making across the company.",
+      problem: "Cricket fans needed an ad-free streaming experience with intelligent features.",
+      role: "Built the streaming platform with real-time chat and AI-powered summaries.",
+      techUsed: "React and TypeScript for the frontend, Express backend, with CSE integration for content discovery.",
+      outcome: "Delivers high-quality cricket streaming with real-time engagement and AI match summaries.",
     },
   },
 ];
