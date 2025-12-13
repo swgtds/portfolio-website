@@ -58,15 +58,15 @@ export const about: About = {
 export const skills: SkillCategory[] = [
   {
     title: "Core",
-    skills: ["TypeScript", "JavaScript", "Python", "React", "Next.js", "Node.js", "Tailwind CSS"],
+    skills: ["TypeScript", "JavaScript", "React", "Next.js", "Node.js", "JAVA"],
   },
   {
     title: "Data & Cloud",
-    skills: ["PostgreSQL", "MongoDB", "Firebase", "AWS", "Docker", "Vercel"],
+    skills: ["PostgreSQL", "MongoDB", "Firebase", "AWS", "Vercel"],
   },
   {
     title: "Tools",
-    skills: ["Git", "Figma", "CI/CD"],
+    skills: ["Git", "Docker", "Github Actions"],
   },
 ];
 
@@ -183,9 +183,9 @@ export const achievements: Achievement[] = [
     year: 2022,
   },
   {
-    title: "Hackathon Winner",
-    description: "Won first place in the 2021 Global Tech Hackathon for building an innovative IoT solution.",
-    year: 2021,
+    title: "Grand Finalist - Smart India Hackathon 2024",
+    description: "Selected as a Grand Finalist from 20,000+ teams across the country.",
+    year: 2024,
   },
 ];
 
