@@ -18,9 +18,9 @@ type ResumeModalProps = {
 
 export function ResumeModal({ isOpen, onOpenChange }: ResumeModalProps) {
   // Google Drive link for preview (embed format)
-  const resumeViewUrl = "https://drive.google.com/file/d/1R-rc7nHcnsdGnFOVSMW5RmiNiLKYQ5ST/preview";
+  const resumeViewUrl = "https://drive.google.com/file/d/1HSyYRFUTONeSNJ0y549iMNVQmelEe8AA/preview";
   // Google Drive link for download (direct download format)
-  const resumeDownloadUrl = "https://drive.google.com/uc?export=download&id=1R-rc7nHcnsdGnFOVSMW5RmiNiLKYQ5ST";
+  const resumeDownloadUrl = "https://drive.google.com/uc?export=download&id=1HSyYRFUTONeSNJ0y549iMNVQmelEe8AA";
 
   const handleDownload = (e: React.MouseEvent) => {
     e.preventDefault();
