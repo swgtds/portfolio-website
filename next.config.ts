@@ -2,6 +2,7 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  allowedDevOrigins: ['swgtds.in', 'www.swgtds.in'],
   typescript: {
     ignoreBuildErrors: true,
   },
