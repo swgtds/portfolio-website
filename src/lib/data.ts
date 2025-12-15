@@ -5,8 +5,8 @@ import { Home, User, Briefcase, Shapes, MessageSquare, Code, Rss, MoreHorizontal
 export const siteConfig: SiteConfig = {
   name: "Portfolio | swgtds",
   description: "A passionate Full-Stack Developer with experience in building scalable web applications using modern technologies. Let's build something amazing together.",
-  url: "https://recruiter-ready.vercel.app",
-  ogImage: "https://recruiter-ready.vercel.app/og-image.jpg",
+  url: "https://swgtds.in",
+  ogImage: "https://swgtds.in/og-image.jpg",
   email: "swagatadas003@gmail.com",
   links: {
     github: "https://github.com/swgtds",
