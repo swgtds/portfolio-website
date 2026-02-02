@@ -46,7 +46,7 @@ export const moreNavLinks: NavLink[] = [
 
 export const hero: Hero = {
   name: "Swagata Das",
-  role: "AI Engineer",
+  role: "Software Developer",
   tagline: "Building web and AI solutions that make a difference.",
 };
 
