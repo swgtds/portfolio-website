@@ -145,7 +145,7 @@ export const experience: Experience[] = [
   {
     role: "Software Development Intern",
     company: "CometChat",
-    period: "June 2025 - Present",
+    period: "June 2025 - March 2026",
     location: "Mumbai, Maharashtra, India",
     workType: "Remote",
     logo: "https://placehold.co/32x32/212529/0ea5e9/png?text=C",
